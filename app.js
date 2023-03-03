@@ -4,7 +4,7 @@ const ejs = require('ejs')
 const bodyparser = require('body-parser')
 const router = require('./router/index')
 const path = require('path')
-const port = 500
+const port = 505
 
 const app = express()
 app.set('view engine',"ejs")
@@ -20,5 +20,5 @@ app.use((req,res,next)=>{
 })
 
 app.listen(port, () => {
-    console.log("Iniciando puerto 500")
+    console.log("Iniciando puerto 505")
 })

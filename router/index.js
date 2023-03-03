@@ -4,7 +4,7 @@ const ejs = require('ejs');
 const bodyparser = require('body-parser')
 
 
-router.get('/index', (req, res) => {
+router.get('/viajes', (req, res) => {
 	const valores = {
 		
 		numBoleto: req.query.numBoleto,
@@ -18,12 +18,12 @@ router.get('/index', (req, res) => {
         descuento: req.query.descuento,
         totalAPagar: req.query.totalAPagar
 	};
-	res.render('index.html', valores);
+	res.render('viajes.html', valores);
 });
 
 
 
-router.post('/index', (req, res) => {
+router.post('/viajes', (req, res) => {
 	const valores = {
 		subtotal: req.body.subtotal,
 		numBoleto: req.body.numBoleto,
@@ -37,7 +37,7 @@ router.post('/index', (req, res) => {
         descuento: req.body.descuento,
         totalAPagar: req.body.totalAPagar
 	};
-	res.render('index.html', valores);
+	res.render('viajes.html', valores);
 });
 
 
