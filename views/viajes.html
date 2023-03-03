@@ -76,7 +76,7 @@
                       
                       subtotal = precio;
                       impuesto = subtotal * 0.16;
-                      descuento = subtotal * 0.20;
+                      descuento = (Number(subtotal) + Number(impuesto))* 0.20;
                         
                         
                         if(tipoDeViaje == 2){
@@ -87,6 +87,8 @@
 
                       if(anosCumplidos >= 60){
                         totalAPagar = totalAPagar/2
+                        descuento = Number(descuento) +  Number(totalAPagar)
+                        
                       }
 
 
