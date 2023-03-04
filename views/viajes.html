@@ -72,22 +72,27 @@
                       var impuesto=0;
                       var descuento=0;
                       var totalAPagar=0;
-                
-                      
                       subtotal = precio;
-                      impuesto = subtotal * 0.16;
-                      descuento = (Number(subtotal) + Number(impuesto))* 0.20;
+                      
+                      
                         
                         
                         if(tipoDeViaje == 2){
-                          totalAPagar = Number(subtotal) + Number(impuesto) - Number(descuento);
+                          subtotal = Number(precio)*2
+                          impuesto = subtotal * 0.16;
+                          descuento = (Number(subtotal) + Number(impuesto))* 0.20;
+                          totalAPagar = (Number(subtotal) + Number(impuesto) - Number(descuento));
+                          
                         }else{
+                            impuesto = subtotal * 0.16;
                             totalAPagar = Number(subtotal) + Number(impuesto) ;
+                            descuento = 0
                         }
 
                       if(anosCumplidos >= 60){
-                        totalAPagar = totalAPagar/2
-                        descuento = Number(descuento) +  Number(totalAPagar)
+                        descuento = Number(descuento) +  totalAPagar/2
+
+                        totalAPagar = totalAPagar/2 
                         
                       }
 
